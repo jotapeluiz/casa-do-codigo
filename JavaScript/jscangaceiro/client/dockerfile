@@ -1,0 +1,16 @@
+FROM node:10.16
+
+WORKDIR /home/jscangaceiro/client
+
+COPY . .
+
+RUN npm install
+
+RUN if [ "$NODE_ENV" = "development" ]; \
+	  then npm run build-dev;  \
+	  else npm run build-prod; \
+	  fi
+
+EXPOSE 8080
+
+CMD [ "npm", "start" ]

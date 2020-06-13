@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  server:    
+    build: .
+    container_name: jscangaceiro-server
+    volumes:
+      - .:/home/jscangaceiro/server
+    ports:
+      - "3000:3000"

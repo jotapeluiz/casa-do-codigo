@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  ecmascript6:
+    build: .
+    container_name: ecmascript6
+    volumes:
+      - .:/home/ecmascript6
